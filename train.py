@@ -118,10 +118,10 @@ def train(args, data):
     trainer.train()
     trainer(manner='classic')
 
-    #after train, go to test
-    pred = model(features)
-    test_acc = cal_acc(pred[idx_test], labels[idx_test])
-    print('test in {0} acc= {1:.4f}'.format(args.dataset,test_acc))
+    # #after train, go to test
+    # pred = model(features)
+    # test_acc = cal_acc(pred[idx_test], labels[idx_test])
+    # print('test in {0} acc= {1:.4f}'.format(args.dataset,test_acc))
 
 
 if __name__ == '__main__':

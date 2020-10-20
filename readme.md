@@ -1,5 +1,5 @@
 
-This is a reproduction of Graph Convolution Network via PyTorch ver1.x
+This is a reproduction of GCN(Graph Convolution Network) via PyTorch(>1.0)
 
 >paper:
 >Thomas N. Kipf,.etc, [Semi-Supervised Classification with Graph Convolutional Networks, ICLR2017](https://arxiv.org/pdf/1609.02907.pdf)
@@ -15,21 +15,21 @@ Zhilin Yang,.etc, [Revisiting Semi-Supervised Learning with Graph Embeddings](ht
 >
 >for data_name in [x,y,allx,ally,tx,ty,graph,test.index]   
 
-#Requirements：
+# Requirements：
 - torch 1.6.0
+- networkx 2.5
 
-
-#Benchmark
+# Benchmark
 
 
 | dataset       | Citeseea | Cora | Pubmed | NELL |
 |---------------|----------|------|--------|------|
 | GCN(paper)    | 70.3     | 81.5 | 79.0   | 66.0 |
-| This repo     | 72.3     | 81.3 | 80.2   |      |
+| This repo     | 72.3     | 81.3 | 80.3   |      |
 
 
 
-#Best Run
+# Best Run
 
 citeseer 72.3
 ```bash
@@ -39,10 +39,10 @@ python train.py --dataset citeseer --n_epochs 500 --lr 0.001 --optimizer adam
 
 cora 81.3
 ```bash
-python train.py --dataset cora --n_epochs 9000 --save_interval 100 --lr 0.0001 --optimizer adam
+ python train.py --dataset pubmed --n_epochs 1000 --save_interval 100 --lr 0.001 --optimizer adam
 ```
 
 pubmed 80.2
 ```bash
-python train.py --dataset cora --n_epochs 9000 --save_interval 100 --lr 0.0001 --optimizer adam
+python train.py --dataset pubmed --n_epochs 6000 --save_interval 100 --lr 0.0001 --optimizer adam
 ```
