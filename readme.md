@@ -42,7 +42,7 @@ cora 81.3
  python train.py --dataset pubmed --n_epochs 1000 --save_interval 100 --lr 0.001 --optimizer adam
 ```
 
-pubmed 80.2
+pubmed 80.3
 ```bash
 python train.py --dataset pubmed --n_epochs 6000 --save_interval 100 --lr 0.0001 --optimizer adam
 ```
