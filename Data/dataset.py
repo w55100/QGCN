@@ -57,7 +57,7 @@ def row_normalize(mx):
     return mx
 
 def row_normalize_safe(features):
-    """ safe version.
+    """ safe version. by qq
     dived by the sum of each row.
     input : [N,D] np.ndarray
     """

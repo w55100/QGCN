@@ -78,10 +78,10 @@ class qTrainer(object):
         """default func"""
         inpt, target = data  # 默认约定data格式为(input,target)
         pred = self.model(inpt)
-        batchloss = self.criterion(pred, target)
+        batch_loss = self.criterion(pred, target)
 
         self.optimizer.zero_grad()
-        batchloss.backward()
+        batch_loss.backward()
         self.optimizer.step()
 
         metric_val = None
